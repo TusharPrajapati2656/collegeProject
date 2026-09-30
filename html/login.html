@@ -6,6 +6,10 @@
     <title>Login - Insurance Portal</title>
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/login.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/loginValidation.js"></script>
+
   </head>
   <body>
     <main class="login-page">
@@ -14,7 +18,7 @@
         <h1 class="login-title">Welcome Back</h1>
         <p class="login-subtitle">Please enter your details to sign in to your account</p>
 
-        <form id="login-form" class="login-form" action="home.html" method="post">
+        <form id="login-form" class="login-form" action="home.html" method="get" novalidate>
           <div class="form-group">
             <label for="mobile" class="form-label">Mobile Number</label>
             <input
@@ -23,13 +27,12 @@
               name="mobile"
               class="form-input"
               placeholder="Enter 10-digit mobile number"
-              pattern="[0-9]{10}"
+              inputmode="numeric"
               minlength="10"
               maxlength="10"
-              inputmode="numeric"
               autocomplete="tel"
-              required
             />
+            <span class="error-text mobile-error"></span>
           </div>
 
           <div class="form-group">
@@ -40,10 +43,10 @@
               name="password"
               class="form-input"
               placeholder="Enter your password"
-              minlength="3"
               autocomplete="current-password"
               required
             />
+            <span class="error-text pass-error"></span>
           </div>
 
           <div class="form-actions">
