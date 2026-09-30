@@ -1,0 +1,357 @@
+/* ===================================================
+   SIGNUP PAGE STYLING (CLEAN & PROFESSIONAL LIGHT THEME)
+   =================================================== */
+
+.signup-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1.6rem;
+  /* background-image: linear-gradient(180deg, #f1f5f9 0%, #f8fafc 100%); */
+}
+
+.signup-page1{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1.6rem;
+  background-color: black;
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 52rem;
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--card-border, #e2e8f0);
+  border-radius: var(--radius-lg, 16px);
+  box-shadow: var(--shadow-card, 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 10px 25px -5px rgba(0, 0, 0, 0.08));
+  padding: 4rem 3.6rem;
+}
+
+.signup-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #1d4ed8;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  padding: 0.45rem 1.2rem;
+  border-radius: 9999px;
+  margin-bottom: 1.6rem;
+}
+
+.signup-badge::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #2563eb;
+}
+
+.signup-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--text-main, #0f172a);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.6rem;
+}
+
+.signup-subtitle {
+  font-size: 1.4rem;
+  color: var(--text-secondary, #64748b);
+  margin-bottom: 3rem;
+  line-height: 1.5;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  text-align: left;
+}
+
+.form-label {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #334155;
+  letter-spacing: 0.01em;
+}
+
+.form-input {
+  width: 100%;
+  font-family: inherit;
+  font-size: 1.4rem;
+  color: #0f172a;
+  background: var(--input-bg, #ffffff);
+  border: 1px solid var(--input-border, #cbd5e1);
+  border-radius: var(--radius-md, 10px);
+  padding: 1.2rem 1.6rem;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-input::placeholder {
+  color: var(--text-muted, #94a3b8);
+  font-size: 1.35rem;
+}
+
+.form-input:hover {
+  border-color: var(--input-border-hover, #94a3b8);
+}
+
+.form-input:focus {
+  border-color: var(--input-focus-border, #2563eb);
+  box-shadow: 0 0 0 3px var(--input-focus-ring, rgba(37, 99, 235, 0.15));
+}
+
+/* Custom Dropdown Styling */
+.form-select {
+  width: 100%;
+  font-family: inherit;
+  font-size: 1.4rem;
+  color: #0f172a;
+  background: var(--input-bg, #ffffff) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 1.6rem center;
+  background-size: 1.6rem;
+  border: 1px solid var(--input-border, #cbd5e1);
+  border-radius: var(--radius-md, 10px);
+  padding: 1.2rem 4rem 1.2rem 1.6rem;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-select:hover {
+  border-color: var(--input-border-hover, #94a3b8);
+}
+
+.form-select:focus {
+  border-color: var(--input-focus-border, #2563eb);
+  box-shadow: 0 0 0 3px var(--input-focus-ring, rgba(37, 99, 235, 0.15));
+}
+
+.form-select option {
+  background-color: #ffffff;
+  color: #0f172a;
+  padding: 1rem;
+}
+
+/* Fieldset and Radio Buttons */
+.form-fieldset {
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-md, 10px);
+  padding: 1.4rem 1.6rem;
+  background: #f8fafc;
+}
+
+.form-legend {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #334155;
+  padding: 0 0.6rem;
+}
+
+.radio-group {
+  display: flex;
+  gap: 2.4rem;
+  margin-top: 0.8rem;
+}
+
+.radio-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+}
+
+.form-radio {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  transition: all 0.15s ease;
+  background: #ffffff;
+}
+
+.form-radio::before {
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.15s transform ease-in-out;
+  background: #2563eb;
+}
+
+.form-radio:checked {
+  border-color: #2563eb;
+}
+
+.form-radio:checked::before {
+  transform: scale(1);
+}
+
+.radio-label {
+  font-size: 1.4rem;
+  color: #334155;
+  cursor: pointer;
+}
+
+/* Terms Checkbox */
+.form-group--checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 0.4rem 0;
+}
+
+.form-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+  background: #ffffff;
+}
+
+.form-checkbox::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 0.15s transform ease-in-out;
+  background-color: #ffffff;
+}
+
+.form-checkbox:checked {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+.form-checkbox:checked::before {
+  transform: scale(1);
+}
+
+.checkbox-label {
+  font-size: 1.3rem;
+  color: var(--text-secondary, #64748b);
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.checkbox-label a {
+  color: #2563eb;
+  font-weight: 500;
+}
+
+/* Actions and Buttons */
+.form-actions {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 0.8rem;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1.3rem 2rem;
+  border-radius: var(--radius-md, 10px);
+  transition: all 0.15s ease;
+  letter-spacing: 0.01em;
+}
+
+.btn--primary {
+  flex: 2;
+  color: #ffffff;
+  background: var(--accent-primary, #2563eb);
+  box-shadow: var(--shadow-btn, 0 1px 2px 0 rgba(0, 0, 0, 0.05));
+}
+
+.btn--primary:hover {
+  background: var(--accent-primary-hover, #1d4ed8);
+  box-shadow: var(--shadow-btn-hover, 0 4px 12px rgba(37, 99, 235, 0.25));
+}
+
+.btn--primary:active {
+  background: #1e40af;
+}
+
+.btn--secondary {
+  flex: 1;
+  background: var(--btn-secondary-bg, #f8fafc);
+  border: 1px solid var(--btn-secondary-border, #e2e8f0);
+  color: var(--btn-secondary-text, #475569);
+}
+
+.btn--secondary:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
+
+.login-redirect {
+  font-size: 1.35rem;
+  color: var(--text-secondary, #64748b);
+  text-align: center;
+  margin-top: 1.2rem;
+}
+
+.login-redirect a {
+  color: #2563eb;
+  font-weight: 600;
+  margin-left: 0.4rem;
+}
+
+@media (max-width: 480px) {
+  .signup-card {
+    padding: 3rem 2rem;
+    border-radius: 12px;
+  }
+  
+  .signup-title {
+    font-size: 2.2rem;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

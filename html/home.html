@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insurance Portal - Home</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/script.js">
+    </script>
+    
+  </head>
+  <body class="home-page">
+    <!-- ==================== HEADER ==================== -->
+    <header class="site-header">
+      <div class="header-container">
+        <!-- Logo on left side -->
+        <a href="home.html" class="logo">
+          <svg
+            class="logo-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            <path d="m9 12 2 2 4-4" />
+          </svg>
+          <span class="logo-text">Insurance Portal</span>
+        </a>
+
+        <!-- Navigation Buttons -->
+        <nav class="nav-menu" id="nav-menu">
+          <a href="home.html" class="nav-item active">Home</a>
+          <a href="#policies" class="nav-item">Policies</a>
+          <a href="#e-claim-section" class="nav-item">e-Claim</a>
+          <a href="#service-section" class="nav-item">Service Request</a>
+          <a href="login.html" class="btn btn--myaccount" id="myaccount-btn">
+            <svg
+              class="btn-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+            Myaccount
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ==================== MAIN HERO SECTION ==================== -->
+    <main class="hero-section">
+      <div class="hero-container">
+        <!-- Text on Left Side -->
+        <div class="hero-left">
+          <span class="hero-badge">Verified &amp; Trusted Protection</span>
+          <h1 class="hero-title">
+            Protecting What Matters Most to You and Your Family
+          </h1>
+          <p class="hero-description">
+            Experience comprehensive coverage tailored to your life. From health
+            and motor to life and asset protection, enjoy seamless digital
+            enrollment and expedited settlement.
+          </p>
+          <div class="hero-actions">
+            <a href="#policies" class="btn btn--primary">Explore Policies</a>
+            <a href="#e-claim-section" class="btn btn--secondary"
+              >Start an e-Claim</a
+            >
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">99.4%</span>
+              <span class="stat-label">Claim Settlement</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">2M+</span>
+              <span class="stat-label">Active Policies</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Support Helpdesk</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Simple Image on Right Side -->
+        <div class="hero-right">
+          <div class="hero-image-wrapper">
+            <img
+              src="../images/hero-illustration.jpg"
+              alt="Insurance Protection Shield"
+              class="hero-image"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ==================== POLICIES TABLE SECTION ==================== -->
+    <section class="policies-section" id="policies">
+      <div class="section-container">
+        <div class="section-heading">
+          <span class="section-badge">Coverage Plans</span>
+          <h2 class="section-title">Available Insurance Policies</h2>
+          <p class="section-subtitle">
+            Browse our diverse portfolio of trusted policies designed for
+            comprehensive personal and commercial coverage.
+          </p>
+        </div>
+
+        <div class="table-card">
+          <div class="table-responsive">
+            <table class="policies-table">
+              <thead>
+                <tr>
+                  <th>Policy Name</th>
+                  <th>Code</th>
+                  <th>Category</th>
+                  <th>Sum Insured</th>
+                  <th>Term Duration</th>
+                  <th>Premium</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="policy-name-cell">
+                      <span class="policy-title"
+                        >Comprehensive Health Shield</span
+                      >
+                      <span class="policy-desc"
+                        >In-patient, day care &amp; critical illness</span
+                      >
+                    </div>
+                  </td>
+                  <td><code>POL-HLTH-101</code></td>
+                  <td>
+                    <span class="category-badge category-health">Health</span>
+                  </td>
+                  <td class="bold-text">$500,000</td>
+                  <td>1 Year (Renewable)</td>
+                  <td class="premium-text">$45 / mo</td>
+                  <td>
+                    <a href="signup.html" class="btn-action">Apply Now</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="policy-name-cell">
+                      <span class="policy-title">Term Life Secure Plus</span>
+                      <span class="policy-desc"
+                        >High cover term assurance with accidental benefit</span
+                      >
+                    </div>
+                  </td>
+                  <td><code>POL-LIFE-204</code></td>
+                  <td>
+                    <span class="category-badge category-life">Life</span>
+                  </td>
+                  <td class="bold-text">$1,000,000</td>
+                  <td>20 – 30 Years</td>
+                  <td class="premium-text">$32 / mo</td>
+                  <td>
+                    <a href="signup.html" class="btn-action">Apply Now</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="policy-name-cell">
+                      <span class="policy-title">All-Drive Motor Protect</span>
+                      <span class="policy-desc"
+                        >Bumper-to-bumper vehicle coverage &amp; roadside
+                        aid</span
+                      >
+                    </div>
+                  </td>
+                  <td><code>POL-AUTO-305</code></td>
+                  <td>
+                    <span class="category-badge category-motor">Motor</span>
+                  </td>
+                  <td class="bold-text">Market Value (0 Dep)</td>
+                  <td>1 Year (Renewable)</td>
+                  <td class="premium-text">$28 / mo</td>
+                  <td>
+                    <a href="signup.html" class="btn-action">Apply Now</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="policy-name-cell">
+                      <span class="policy-title">Family Floater Care</span>
+                      <span class="policy-desc"
+                        >Covers self, spouse, and up to 3 dependent
+                        children</span
+                      >
+                    </div>
+                  </td>
+                  <td><code>POL-FAM-402</code></td>
+                  <td>
+                    <span class="category-badge category-health">Health</span>
+                  </td>
+                  <td class="bold-text">$750,000</td>
+                  <td>1 – 3 Years</td>
+                  <td class="premium-text">$65 / mo</td>
+                  <td>
+                    <a href="signup.html" class="btn-action">Apply Now</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="policy-name-cell">
+                      <span class="policy-title">Home &amp; Asset Shield</span>
+                      <span class="policy-desc"
+                        >Fire, natural calamity, theft &amp; structural
+                        safety</span
+                      >
+                    </div>
+                  </td>
+                  <td><code>POL-HOME-512</code></td>
+                  <td>
+                    <span class="category-badge category-property"
+                      >Property</span
+                    >
+                  </td>
+                  <td class="bold-text">$850,000</td>
+                  <td>5 Years</td>
+                  <td class="premium-text">$38 / mo</td>
+                  <td>
+                    <a href="signup.html" class="btn-action">Apply Now</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="policy-name-cell">
+                      <span class="policy-title"
+                        >Critical Illness Safeguard</span
+                      >
+                      <span class="policy-desc"
+                        >Lump sum payout for 36 major specified illnesses</span
+                      >
+                    </div>
+                  </td>
+                  <td><code>POL-CRIT-608</code></td>
+                  <td>
+                    <span class="category-badge category-special"
+                      >Specialized</span
+                    >
+                  </td>
+                  <td class="bold-text">$300,000</td>
+                  <td>10 Years</td>
+                  <td class="premium-text">$22 / mo</td>
+                  <td>
+                    <a href="signup.html" class="btn-action">Apply Now</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TWO CARDS: E-CLAIM & SERVICE REQUEST ==================== -->
+    <section class="services-section">
+      <div class="section-container">
+        <div class="two-cards-grid">
+          <!-- Card 1: Start an e-Claim (Left Side) -->
+          <div class="service-card" id="e-claim-section">
+            <div class="card-icon-box card-icon-claim">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+                <polyline points="10 9 9 9 8 9" />
+              </svg>
+            </div>
+            <div class="card-content">
+              <span class="card-badge">Instant Claims</span>
+              <h3 class="card-title">Start an e-Claim</h3>
+              <p class="card-description">
+                Submit and track your insurance claims 100% online with zero
+                paperwork. Upload incident photos and bills for prompt
+                adjudication.
+              </p>
+              <div class="card-action">
+                <a href="login.html" class="btn btn--primary btn--full"
+                  >Start an e-Claim</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Service Request (Right Side) -->
+          <div class="service-card" id="service-section">
+            <div class="card-icon-box card-icon-service">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                />
+              </svg>
+            </div>
+            <div class="card-content">
+              <span class="card-badge">Policy Support</span>
+              <h3 class="card-title">Service Request</h3>
+              <p class="card-description">
+                Manage your existing policies conveniently. Update contact info,
+                change nominees, request policy certificates, or schedule
+                doorstep support.
+              </p>
+              <div class="card-action">
+                <a href="login.html" class="btn btn--secondary btn--full"
+                  >Service Request</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="logo">
+              <svg
+                class="logo-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              <span class="logo-text">Insurance Portal</span>
+            </div>
+            <p class="footer-tagline">
+              Empowering individuals and families with dependable, transparent,
+              and technology-driven insurance solutions.
+            </p>
+          </div>
+
+          <div class="footer-links-grid">
+            <div class="footer-col">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#policies">Policies</a></li>
+                <li><a href="#e-claim-section">e-Claim</a></li>
+                <li><a href="#service-section">Service Request</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Account</h4>
+              <ul>
+                <li><a href="login.html">Sign In</a></li>
+                <li><a href="signup.html">Create Account</a></li>
+                <li><a href="login.html">Track Claim</a></li>
+                <li><a href="login.html">Download Policy</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Support</h4>
+              <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Toll-Free: 1800-00-PORTAL</a></li>
+                <li><a href="#">support@insuranceportal.com</a></li>
+                <li><a href="#">Claims Helpdesk</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">
+            &copy; 2026 Insurance Portal. All rights reserved.
+          </p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Security Disclosure</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
