@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="../css/signup.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="../js/script.js"></script>
-    <script src="../js/loginValidation.js"></script>
+    <script src="../js/validationUtils.js"></script>
     <script src="../js/signupValidation.js"></script>
 
   </head>
@@ -20,7 +19,7 @@
         <h1 class="signup-title">Create Your Account</h1>
         <p class="signup-subtitle">Set up your profile to choose and manage policies</p>
 
-        <form id="signup-form" class="signup-form" action="login.html">
+        <form id="signup-form" class="signup-form" action="login.html" novalidate>
           <div class="form-group">
             <label for="full-name" class="form-label">Full Name</label>
             <input
@@ -56,6 +55,7 @@
               class="form-input"
               placeholder="Enter 10-digit mobile number"
               inputmode="numeric"
+              maxlength="10"
               autocomplete="tel"
             />
             <span class="error-text mobile-error"></span>
@@ -109,6 +109,7 @@
                 <label for="age-no" class="radio-label">No</label>
               </div>
             </div>
+            <span class="error-text age-error"></span>
           </fieldset>
 
           <div class="form-group form-group--checkbox">
@@ -121,6 +122,7 @@
             <label for="terms-conditions" class="checkbox-label">
               I accept the <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a>
             </label>
+            <span class="error-text terms-error"></span>
           </div>
 
           <div class="form-actions">

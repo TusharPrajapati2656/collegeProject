@@ -1,38 +1,42 @@
 $(document).ready(function () {
-  $("#login-form, #signup-form").on("submit", function (event) {
-    event.preventDefault();
+  let hasSubmitted = false;
 
-    // let currentForm = $(this)
+  const loginForm = $("#login-form");
+  if (loginForm.length === 0) return;
 
-    let mobileNumber = $("#mobile").val();
-    let mobileError = $(".mobile-error");
-    let mobileRegex = /^[6-9]\d{9}$/;
-    let password = $("#password").val();
-    let passError = $(".pass-error");
-    let minLength = 4;
-    let maxLength = 20;
+  const mobileInput = loginForm.find("#mobile");
+  const passwordInput = loginForm.find("#password");
 
-    if (mobileNumber === "") {
-      mobileError.text("Mobile number cannot be empty");
-      mobileError.show();
-    } else if (!mobileRegex.test(mobileNumber)) {
-      mobileError.text("Invalid Mobile number");
-      mobileError.show();
-    } else {
-      mobileError.hide();
+  // Attach live input sanitization
+  FormValidators.setupLiveSanitization(loginForm);
+
+  // Live validation listeners (Active only AFTER first submit attempt)
+  mobileInput.on("input blur", function () {
+    if (hasSubmitted) {
+      FormValidators.validateMobile(loginForm);
     }
+  });
 
-    if (password === "") {
-      passError.text("Password cannot be empty");
-      passError.show();
-    } else if (password.length < minLength) {
-      passError.text(`Password cannot be less that ${minLength}`);
-      passError.show();
-    } else if (password.length > maxLength) {
-      passError.text(`Password cannot be less that ${maxLength}`);
-      passError.show();
-    } else {
-      passError.hide();
+  passwordInput.on("input blur", function () {
+    if (hasSubmitted) {
+      FormValidators.validatePassword(loginForm, 4, 20);
+    }
+  });
+
+  // Submit Handler
+  loginForm.on("submit", function (event) {
+    hasSubmitted = true;
+
+    // Pre-submit sanitization
+    mobileInput.val(Sanitizer.cleanMobile(mobileInput.val()));
+    passwordInput.val(Sanitizer.cleanPassword(passwordInput.val()));
+
+    // Reusable validations
+    const isMobileValid = FormValidators.validateMobile(loginForm);
+    const isPasswordValid = FormValidators.validatePassword(loginForm, 4, 20);
+
+    if (!isMobileValid || !isPasswordValid) {
+      event.preventDefault();
     }
   });
 });
